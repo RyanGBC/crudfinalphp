@@ -1,0 +1,113 @@
+#principal{
+    width: 615px;
+    height: 330px;
+    border: 1px solid #000;
+    position: relative;
+    margin: auto;
+}
+html,body{
+    background-color: #c7c7c7;
+    margin: 0;
+    padding: 0;
+}
+h1{
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(0, 183, 255);
+}
+
+#clicad{
+    width: 300px;
+    height:200px;
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 5px;
+    text-align: center;
+}
+
+#cliconsulta{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    margin-top: 215px;
+    margin-left: 5px;
+    text-align: center;
+}
+
+#cliexcluir{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    margin-top: 215px;
+    margin-left: 105px;
+    text-align: center;
+}
+
+#clialterar{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    margin-top: 215px;
+    margin-left: 205px;
+    text-align: center;
+}
+
+#prodcad{
+    width: 300px;
+    height:200px;
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 310px;
+    text-align: center;
+}
+
+#prodconsulta{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    margin-top: 215px;
+    margin-left: 310px;
+    text-align: center;
+}
+
+#prodexcluir{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    margin-top: 215px;
+    margin-left: 410px;
+    text-align: center;
+}
+
+#prodalterar{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    margin-top: 215px;
+    margin-left: 510px;
+    text-align: center;
+}
+
+.footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 50px 0;
+    background-color: rgb(0, 183, 255);
+    margin-top: 375px;
+    left: 0;
+    right: 0;
+}
+
+footer .copyright{
+    margin-top: 15pX;
+    text-align: center;
+    font-size: 12pX;
+    color:white
+    white;
+}
+
+.copyright{
+    color: rgb(0, 0, 0);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
