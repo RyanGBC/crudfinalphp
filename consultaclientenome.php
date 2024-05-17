@@ -15,33 +15,24 @@
         </a>
     </figure>
     <?php
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        include_once "factory/conexao.php";
-        
-        // Sanitização e segurança
-        $cod = mysqli_real_escape_string($conn, $_POST["cxpesquisanome"]);
-        $consulta = "SELECT * FROM tbcliente WHERE nome = ?";
-        $stmt = mysqli_prepare($conn, $consulta);
-        mysqli_stmt_bind_param($stmt, "s", $cod);
-        mysqli_stmt_execute($stmt);
-        $resultado = mysqli_stmt_get_result($stmt);
-        $linha = mysqli_fetch_array($resultado);
-        
-        if ($linha) {
-            echo "Nome: " . htmlspecialchars($linha["nome"]) . "<br/>";
-            echo "E-mail: " . htmlspecialchars($linha["email"]) . "<br/>";
-            echo '<a href="excluircliente.php?id=' . htmlspecialchars($linha["codigo"]) . '">Excluir</a> ';
-            echo '<a href="">Alterar</a>';
-        } else {
-            echo "Cliente não encontrado.";
-        }
-        
-        // Libera o statement e fecha a conexão
-        mysqli_stmt_close($stmt);
-        mysqli_close($conn);
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    include_once "factory/conexao.php";
+
+    $cod = $_POST["cxpesquisanome"];
+    $consulta = "SELECT * FROM tbcliente WHERE nome = '$cod'";
+    $resultado = mysqli_query($conn, $consulta);
+    $linha = mysqli_fetch_array($resultado);
+
+    if ($linha) {
+        echo "Nome: " . $linha["nome"] . "<br/>";
+        echo "E-mail: " . $linha["email"] . "<br/>";
+        echo '<a href="telaexcluirclientes.php?id=' . $linha["codigo"] . '">Excluir</a> ';
+        echo '<a href="telaalterarcliente.php">Alterar</a>';
+    } else {
+        echo "Cliente não encontrado.";
     }
-    ?>
-</section>
+}
+?>
 </body>
 </html>
 

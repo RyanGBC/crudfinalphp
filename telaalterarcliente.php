@@ -4,12 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alterando Cliente</title>
+    <link rel="stylesheet" type="text/css" href="css/estilocad.css">
 </head>
 <body>
-<h1>Alterando Dados do cliente</h1>
+    <figure>
+        <img src="" alt="">
+        <h1>Alterando Dados do cliente</h1>
+    </figure>
     <section id="principal2">
-        <h2>Editar Cliente </h2> 
-    <form action=".php" method="POST">
+        <h2>Digite os dados de quem você quer alterar</h2> 
+    <form action="alterarcliente.php" method="POST">
+        ID do Cliente:
+        <input type="text" name="cxid" id="cxid"><br/><br/>
          Nome:
          <input type="text" name="cxnome" id="cxnome"/><br/><br/>
          E-mail:

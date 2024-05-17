@@ -15,26 +15,24 @@
         </a>
     </figure>
 <?php
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        include_once "factory/conexao.php";
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    include_once "factory/conexao.php";
+    
+    // Verifica se o 'id' existe realmente
+    if (isset($_POST["id"]) && !empty($_POST["id"])) {
+        $id = $_POST["id"];
         
-        // Verifica se o 'id' está definido
-        if (isset($_POST["id"]) && !empty($_POST["id"])) {
-            $id = $_POST["id"];
-            $id = mysqli_real_escape_string($conn, $id); // Proteção contra SQL Injection
+        $excluir = "DELETE FROM tbcliente WHERE codigo = '$id'";
+        $executar = mysqli_query($conn, $excluir);
 
-            $excluir = "DELETE FROM tbcliente WHERE codigo = '$id'";
-            $executar = mysqli_query($conn, $excluir);
-
-            if ($executar) {
-                echo "Cliente excluído com sucesso!";
-            } else {
-                echo "Erro ao excluir o cliente: " . mysqli_error($conn);
-            }
+        if ($executar) {
+            echo "Cliente excluído com sucesso!";
         } else {
-            echo "ID do cliente não especificado.";
+            echo "Erro ao excluir o cliente: ";
         }
-        
-        mysqli_close($conn);
+    } else {
+        echo "ID do cliente não especificado.";
     }
+}
 ?>
+
