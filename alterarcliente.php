@@ -14,6 +14,8 @@
             <img src="img/btnvoltarcli.png" alt="botao de voltar" id="btnvolt">
         </a>
     </figure>
+</body>
+</html>
 <?php
 if ($_POST["cxnome"] != "" && $_POST["cxemail"] != "" && isset($_POST["cxid"])) {
     include_once "factory/conexao.php";

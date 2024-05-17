@@ -14,6 +14,8 @@
             <img src="img/btnvoltarcli.png" alt="botao de voltar" id="btnvolt">
         </a>
     </figure>
+</body>
+</html>
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     include_once "factory/conexao.php";
