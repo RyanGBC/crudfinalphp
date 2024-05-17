@@ -1,0 +1,40 @@
+#principal2 {
+    width: 615px;
+    height: 100vh;
+    border: 1px solid #000;
+    background-color: #03AED2;
+    position: relative;
+    margin: auto;
+    overflow: auto; 
+}
+
+body {
+    background-color: #c7c7c7;
+}
+
+h1 {
+    text-align: center;
+}
+
+.lista-clientes {
+    max-height: 300px; 
+}
+
+.input-cliente {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.cxvoltar {
+    position: absolute;
+    bottom: 7px; 
+    right: 7px; 
+    padding:7px;
+    text-decoration:none;
+    font-size:15px;
+}
+
+#btnvolt {
+    height: 45px;
+    width: 45px;
+}

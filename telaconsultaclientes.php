@@ -17,7 +17,12 @@
          <input type="text" name="cxemail"/><br/><br/>
          <input type="submit" value="PESQUISAR">
      </form><br/>
-    </nav>
+    <section>
+        <h2>VER TODOS OS CLIENTES</h2>
+        <form action="listarclientes.php">
+            <input type="submit" value="Ver todos" id="cxclitodos">
+        </form>
+    </section>
     <figure>
         <a href="index.php" class="cxvoltar">
         <img src="img/btnvoltarcli.png" alt="botao de voltar" id="btnvolt">
