@@ -1,3 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro do cliente</title>
+    <link rel="stylesheet" type="text/css" href="css/estilocad.css">
+</head>
+<body>
+    <figure>
+        <img src="" alt="">
+        <h1>Cadastrando cliente</h1>
+    </figure>
+    <section id="principal2">
+        <h2>  </h2> 
+    <figure>
+        <a href="index.php" class="cxvoltar">
+        <img src="img/btnvoltarcli.png" alt="botao de voltar" id="btnvolt">
+        </a>
+    </figure>
+</body>
+</html>
 <?php
     if($_POST["cxnome"] != "")
     {
@@ -8,7 +30,6 @@
        values('$nome','$email')";
        $query = mysqli_query($conn,$sql);
        echo "<p>Dados Cadastrados com sucesso<br/></p>";
-       echo "<a href='index.php'>Voltar</a>";
     }
     else
     {
