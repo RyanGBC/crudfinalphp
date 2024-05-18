@@ -20,7 +20,7 @@
                 while($linha = mysqli_fetch_array($executar)) {
             ?>
             <div class="cliente">
-                Código:
+                Codigo:
                 <input type="number" class="input-cliente" value="<?php echo $linha['codigo']; ?>" /> <br/>
                 Nome:
                 <input type="text" class="input-cliente" value="<?php echo $linha['nome']; ?>" /> <br/><br/>
