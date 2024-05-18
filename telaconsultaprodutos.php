@@ -3,25 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alterando Cliente</title>
+    <title>Document</title>
     <link rel="stylesheet" type="text/css" href="css/estilocad.css">
 </head>
 <body>
-    <figure>
-        <img src="" alt="">
-        <h1>Alterando Dados do Produto</h1>
-    </figure>
+    <h1>Consultar Produtos</h1>
     <section id="principal2">
-        <h2>Digite os dados do produto que deseja alterar</h2> 
-    <form action="alterarproduto.php" method="POST">
-        ID do Produto:
-        <input type="text" name="cxid" id="cxid"><br/><br/>
+        <h2>   </h2> 
+    <form action="consultaclientenome.php" method="POST">
          Produto:
-         <input type="text" name="cxprod"/><br/><br/>
+         <input type="text" name="cxpesquisaproduto"/><br/><br/>
          Data de Validade:
          <input type="date" name="cxdata"/><br/><br/>
-         <input type="submit" value="ALTERAR">
+         Valor do Produto:
+         <input type="number" name="cxnum" >
      </form><br/>
+    <section>
+        <h2>VER TODOS OS PRODUTOS</h2>
+        <form action="listarprodutos.php">
+            <input type="submit" value="Ver todos" id="cxprodtodos">
+        </form>
+    </section>
     <figure>
         <a href="index.php" class="cxvoltar">
         <img src="img/btnvoltarcli.png" alt="botao de voltar" id="btnvolt">

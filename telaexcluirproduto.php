@@ -3,24 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alterando Cliente</title>
+    <title>Excluindo cliente</title>
     <link rel="stylesheet" type="text/css" href="css/estilocad.css">
 </head>
 <body>
-    <figure>
-        <img src="" alt="">
-        <h1>Alterando Dados do Produto</h1>
-    </figure>
+    <h1>Excluir Produtos</h1>
     <section id="principal2">
-        <h2>Digite os dados do produto que deseja alterar</h2> 
-    <form action="alterarproduto.php" method="POST">
-        ID do Produto:
-        <input type="text" name="cxid" id="cxid"><br/><br/>
+        <h2>     </h2> 
+    <form action="excluircliente.php" method="POST">
+         ID do Produto:
+         <input type="text" name="id" id="id"/><br/><br/>
          Produto:
-         <input type="text" name="cxprod"/><br/><br/>
-         Data de Validade:
+         <input type="text" name="cxpesquisaproduto"/><br/><br/>
+         Data de validade:
          <input type="date" name="cxdata"/><br/><br/>
-         <input type="submit" value="ALTERAR">
+         Valor do Produto:
+         <input type="number" name="cxnum"><br/><br/>
+         <input type="submit" value="EXCLUIR">
      </form><br/>
     <figure>
         <a href="index.php" class="cxvoltar">

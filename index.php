@@ -46,14 +46,14 @@
         </nav>
         <nav id="prodconsulta">
             <figure>
-                <a href="consultaproduto.php">
+                <a href="telaconsultaprodutos.php">
                 <img src="img/proconsulta.png" alt="consultar produto" width="60" height="50"/>
                 </a>
             </figure>
         </nav>
         <nav id="prodexcluir">
             <figure>
-                <a href="excluirproduto.php">
+                <a href="telaexcluirproduto.php">
                 <img src="img/prodel.png" alt="excluir produto" widht="60" height="50"/>
                 </a>
             </figure>
