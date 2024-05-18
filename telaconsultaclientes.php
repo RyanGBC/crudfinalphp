@@ -12,9 +12,9 @@
         <h2>   </h2> 
     <form action="consultaclientenome.php" method="POST">
          Nome:
-         <input type="text" name="cxpesquisanome" id="cxpesquisanome"/><br/><br/>
+         <input type="text" name="cxpesquisanome" id="cxpesquisanome" placeholder="nomedapessoa"/><br/><br/>
          E-mail:
-         <input type="text" name="cxemail"/><br/><br/>
+         <input type="text" name="cxemail" placeholder="seumelhor@email.com"/><br/><br/>
          <input type="submit" value="PESQUISAR">
      </form><br/>
     <section>
