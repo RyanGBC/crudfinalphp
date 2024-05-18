@@ -10,7 +10,7 @@
     <h1>Excluir Produtos</h1>
     <section id="principal2">
         <h2>     </h2> 
-    <form action="excluircliente.php" method="POST">
+    <form action="excluirproduto.php" method="POST">
          ID do Produto:
          <input type="text" name="id" id="id"/><br/><br/>
          Produto:

@@ -18,17 +18,17 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     include_once "factory/conexao.php";
 
-    $cod = $_POST["cxpesquisaproduto"];
-    $consulta = "SELECT * FROM tbprodutos WHERE nome = '$cod'";
+    $nome = $_POST["cxpesquisaproduto"];
+    $consulta = "SELECT * FROM tbprodutos WHERE produto = '$nome'";
     $resultado = mysqli_query($conn, $consulta);
     $linha = mysqli_fetch_array($resultado);
 
     if ($linha) {
         echo "Produto: " . $linha["produto"] . "<br/>";
-        echo "Data de Validade: " . $linha["data"] . "<br/>";
-        echo "Preço: ". $linha["preço"] . "<br/>";
-        echo '<a href="telaexcluirclientes.php?id=' . $linha["codigo"] . '">Excluir</a> ';
-        echo '<a href="telaalterarcliente.php">Alterar</a>';
+        echo "Data de Validade: " . $linha["datavalidade"] . "<br/>";
+        echo "Preço: ". $linha["valor"] . "<br/>";
+        echo '<a href="telaexcluirproduto.php?id=' . $linha["codigo"] . '">Excluir</a> ';
+        echo '<a href="telaalterarproduto.php">Alterar</a>';
     } else {
         echo "Produto não encontrado.";
     }
