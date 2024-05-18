@@ -12,11 +12,11 @@
         <h2>     </h2> 
     <form action="excluircliente.php" method="POST">
          ID do Cliente:
-         <input type="text" name="id" id="id"/><br/><br/>
+         <input type="text" name="id" id="id" required/><br/><br/>
          Nome:
-         <input type="text" name="cxpesquisanome" id="cxpesquisanome"/><br/><br/>
+         <input type="text" name="cxpesquisanome" id="cxpesquisanome" required/><br/><br/>
          E-mail:
-         <input type="text" name="cxemail"/><br/><br/>
+         <input type="text" name="cxemail" required/><br/><br/>
          <input type="submit" value="EXCLUIR">
      </form><br/>
     <figure>

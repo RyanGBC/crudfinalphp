@@ -12,13 +12,13 @@
         <h2>     </h2> 
     <form action="excluirproduto.php" method="POST">
          ID do Produto:
-         <input type="text" name="id" id="id"/><br/><br/>
+         <input type="text" name="id" id="id" required/><br/><br/>
          Produto:
-         <input type="text" name="cxpesquisaproduto"/><br/><br/>
+         <input type="text" name="cxpesquisaproduto" required/><br/><br/>
          Data de validade:
-         <input type="date" name="cxdata"/><br/><br/>
+         <input type="date" name="cxdata" required/><br/><br/>
          Valor do Produto:
-         <input type="number" name="cxnum"><br/><br/>
+         <input type="number" name="cxnum" required><br/><br/>
          <input type="submit" value="EXCLUIR">
      </form><br/>
     <figure>
