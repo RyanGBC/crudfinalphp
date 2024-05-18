@@ -10,13 +10,14 @@
     <h1>Consultar Produtos</h1>
     <section id="principal2">
         <h2>   </h2> 
-    <form action="consultaclientenome.php" method="POST">
+    <form action="consultaproduto.php" method="POST">
          Produto:
          <input type="text" name="cxpesquisaproduto"/><br/><br/>
          Data de Validade:
          <input type="date" name="cxdata"/><br/><br/>
          Valor do Produto:
-         <input type="number" name="cxnum" >
+         <input type="number" name="cxnum" placeholder="R$"/><br/><br/>
+         <input type="submit" value="PESQUISAR"/>
      </form><br/>
     <section>
         <h2>VER TODOS OS PRODUTOS</h2>

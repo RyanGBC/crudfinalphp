@@ -1,14 +1,38 @@
-<?php
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta Clientes</title>
+    <link rel="stylesheet" type="text/css" href="css/estilocad.css">
+</head>
+<body>
+<h1>CONSULTANDO PRODUTOS</h1>
+<section id="principal2"> 
+    <figure>
+        <a href="index.php" class="cxvoltar">
+            <img src="img/btnvoltarcli.png" alt="botao de voltar" id="btnvolt">
+        </a>
+    </figure>
+    <?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     include_once "factory/conexao.php";
-    $nome = $_POST["cxpesquisanome"];
-    $consulta = "select *from tbproduto 
-    where nome = '$nome'";
-    $executar = mysqli_query($conn,$consulta);
-    $linha = mysqli_fetch_array($executar);
 
+    $cod = $_POST["cxpesquisaproduto"];
+    $consulta = "SELECT * FROM tbprodutos WHERE nome = '$cod'";
+    $resultado = mysqli_query($conn, $consulta);
+    $linha = mysqli_fetch_array($resultado);
+
+    if ($linha) {
+        echo "Produto: " . $linha["produto"] . "<br/>";
+        echo "Data de Validade: " . $linha["data"] . "<br/>";
+        echo "Preço: ". $linha["preço"] . "<br/>";
+        echo '<a href="telaexcluirclientes.php?id=' . $linha["codigo"] . '">Excluir</a> ';
+        echo '<a href="telaalterarcliente.php">Alterar</a>';
+    } else {
+        echo "Produto não encontrado.";
+    }
+}
 ?>
-Nome:
-<?php echo $linha["nome"] ?><br/>
-Preço:
-<?php echo $linha["preço"]?><br/>
-<a href="index.php">Voltar</a>
+</body>
+</html>
