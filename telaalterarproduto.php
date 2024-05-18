@@ -20,6 +20,8 @@
          <input type="text" name="cxprod"/><br/><br/>
          Data de Validade:
          <input type="date" name="cxdata"/><br/><br/>
+         Preço:
+         <input type="number" name="cxpreco"/><br/><br/>
          <input type="submit" value="ALTERAR">
      </form><br/>
     <figure>
