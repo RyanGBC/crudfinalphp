@@ -17,23 +17,20 @@
 </body>
 </html>
 <?php
-if ($_POST["cxnome"] != "" && $_POST["cxemail"] != "" && isset($_POST["cxid"])) {
+
     include_once "factory/conexao.php";
     $nome = $_POST["cxnome"];
     $email = $_POST["cxemail"];
     $idcli = $_POST["cxid"];
-    $sql = "UPDATE tbcliente SET nome = '$nome', email = '$email' WHERE codigo = '$idcli'";
+    $alterar = "UPDATE tbcliente SET nome = '$nome', email = '$email' WHERE codigo = '$idcli'";
     
-    $result = mysqli_query($conn, $sql);
+    $executar = mysqli_query($conn, $alterar);
 
-    if ($result) {
+    if ($executar) {
         echo "<p>Dados Alterados com Sucesso!<br/></p>";
     } else {
         echo "<p>Erro ao alterar dados.</p>";
     }
-} else {
-    echo "Dados não alterados [!ERRO]";
-}
 ?>
 
 

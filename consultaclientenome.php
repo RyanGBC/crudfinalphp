@@ -15,13 +15,12 @@
         </a>
     </figure>
     <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    include_once "factory/conexao.php";
 
+    include_once "factory/conexao.php";
     $cod = $_POST["cxpesquisanome"];
     $consulta = "SELECT * FROM tbcliente WHERE nome = '$cod'";
-    $resultado = mysqli_query($conn, $consulta);
-    $linha = mysqli_fetch_array($resultado);
+    $executar = mysqli_query($conn, $consulta);
+    $linha = mysqli_fetch_array($executar);
 
     if ($linha) {
         echo "Nome: " . $linha["nome"] . "<br/>";
@@ -31,7 +30,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         echo "Cliente não encontrado.";
     }
-}
 ?>
 </body>
 </html>

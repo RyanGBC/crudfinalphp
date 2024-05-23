@@ -17,11 +17,11 @@
 </body>
 </html>
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
     include_once "factory/conexao.php";
     
     // Verifica se o 'id' existe realmente
-    if (isset($_POST["id"]) && !empty($_POST["id"])) {
+    if (isset($_POST["id"] )) {
         $id = $_POST["id"];
         
         $excluir = "DELETE FROM tbprodutos WHERE codigo = '$id'";
@@ -35,6 +35,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         echo "ID do produto não especificado.";
     }
-}
 ?>
 

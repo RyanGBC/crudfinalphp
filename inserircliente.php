@@ -26,9 +26,9 @@
        include_once "factory/conexao.php";
        $nome = $_POST["cxnome"];
        $email = $_POST["cxemail"];
-       $sql = "insert into tbcliente(nome,email)
+       $inserir = "insert into tbcliente(nome,email)
        values('$nome','$email')";
-       $query = mysqli_query($conn,$sql);
+       $query = mysqli_query($conn,$inserir);
        echo "<p>Dados Cadastrados com sucesso<br/></p>";
     }
     else

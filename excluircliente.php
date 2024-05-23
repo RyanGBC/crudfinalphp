@@ -17,13 +17,12 @@
 </body>
 </html>
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
     include_once "factory/conexao.php";
-    
     // Verifica se o 'id' existe realmente
-    if (isset($_POST["id"]) && !empty($_POST["id"])) {
-        $id = $_POST["id"];
+    if (isset($_POST["id"])) {
         
+        $id = $_POST["id"];  
         $excluir = "DELETE FROM tbcliente WHERE codigo = '$id'";
         $executar = mysqli_query($conn, $excluir);
 
@@ -35,6 +34,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         echo "ID do cliente não especificado.";
     }
-}
 ?>
 

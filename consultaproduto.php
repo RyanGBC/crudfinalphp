@@ -15,9 +15,8 @@
         </a>
     </figure>
     <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    
     include_once "factory/conexao.php";
-
     $nome = $_POST["cxpesquisaproduto"];
     $consulta = "SELECT * FROM tbprodutos WHERE produto = '$nome'";
     $resultado = mysqli_query($conn, $consulta);
@@ -32,7 +31,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         echo "Produto não encontrado.";
     }
-}
 ?>
 </body>
 </html>
