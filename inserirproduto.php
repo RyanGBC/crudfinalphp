@@ -12,11 +12,12 @@
         <h1>Cadastrando Produto</h1>
     </figure>
     <section id="principal2">
-        <h2>  </h2> 
+        <h2>  </h2>
     <figure>
+        <a href="index.php" class="cxvoltar">
         <img src="img/btnvoltarcli.png" alt="botao de voltar" id="btnvolt">
         </a>
-    </figure>
+    </figure> 
 </body>
 </html>
 <?php

@@ -11,11 +11,11 @@
     <section id="principal2">
     <form action="inserirproduto.php" method="POST">
         Produto:
-        <input type="text" name="cxproduto" id="cxproduto"/><br><br/>
+        <input type="text" name="cxproduto" id="cxproduto" required/><br><br/>
         Data de Validade:
-        <input type="date" name="cxdata"/><br><br/>
+        <input type="date" name="cxdata" required/><br><br/>
         Valor do Produto:
-        <input type="number" name ="cxvalor"/><br><br/>
+        <input type="number" name ="cxvalor" required/><br><br/>
         <input type="submit" value="Cadastrar"/>
     </form><br/>
     <figure>
