@@ -29,7 +29,7 @@
        $inserir = "insert into tbcliente(nome,email)
        values('$nome','$email')";
        $query = mysqli_query($conn,$inserir);
-       echo "<p>Dados Cadastrados com sucesso<br/></p>";
+       echo "<p>Dados Cadastrados com sucesso!<br/></p>";
     }
     else
     {
