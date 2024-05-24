@@ -27,9 +27,9 @@
         echo "Produto: " . $linha["produto"] . "<br/>";
         echo "Data de Validade: " . $linha["datavalidade"] . "<br/>";
         echo "Preço: ". $linha["valor"] . "<br/>";
-        echo '<a href="telaexcluirproduto.php?id=' . $linha["codigo"] . '">Excluir</a> ';
-        echo '<a href="telaalterarproduto.php">Alterar</a>';
-        echo '<a href="telaconsultaclientes.php" class="cxvoltar">
+        echo '<a href="telaexcluirclientes.php?id=' . $linha["codigo"] . '"><img src="img/excluir.png" alt="Excluir" width="30" height="30" style="margin-left: 25px; margin-top: 20px;"></a>';
+        echo '<a href="telaalterarcliente.php" style="margin-left: 40px;"><img src="img/substituicao.png" alt="Alterar" width="30" height="30"></a>';
+        echo '<a href="telaconsultaprodutos.php" class="cxvoltar">
             <img src="img/btnvoltarcli.png" alt="botao de voltar" id="btnvolt">';
     } else {
         echo "Produto não encontrado.";
