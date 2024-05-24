@@ -18,18 +18,23 @@
     
     include_once "factory/conexao.php";
     $nome = $_POST["cxpesquisaproduto"];
-    $consulta = "SELECT * FROM tbprodutos WHERE produto LIKE = '%$nome%'";
+    $consulta = "SELECT * FROM tbprodutos WHERE produto LIKE '%$nome%'";
     $resultado = mysqli_query($conn, $consulta);
     $linha = mysqli_fetch_array($resultado);
 
     if ($linha) {
+        echo "ID: " . $linha["codigo"] . "<br/>";
         echo "Produto: " . $linha["produto"] . "<br/>";
         echo "Data de Validade: " . $linha["datavalidade"] . "<br/>";
         echo "Preço: ". $linha["valor"] . "<br/>";
         echo '<a href="telaexcluirproduto.php?id=' . $linha["codigo"] . '">Excluir</a> ';
         echo '<a href="telaalterarproduto.php">Alterar</a>';
+        echo '<a href="telaconsultaclientes.php" class="cxvoltar">
+            <img src="img/btnvoltarcli.png" alt="botao de voltar" id="btnvolt">';
     } else {
         echo "Produto não encontrado.";
+        echo '<a href="telaconsultaclientes.php" class="cxvoltar">
+        <img src="img/btnvoltarcli.png" alt="botao de voltar" id="btnvolt">';
     }
 ?>
 </body>

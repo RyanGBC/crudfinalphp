@@ -32,7 +32,7 @@
             <?php } ?>
         </nav>
         <figure class="cxvoltar">
-            <a href="index.php">
+            <a href="telaconsultaprodutos.php">
                 <img src="img/btnvoltarcli.png" alt="botao de voltar" id="btnvolt">
             </a>
         </figure>

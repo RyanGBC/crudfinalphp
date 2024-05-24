@@ -18,17 +18,22 @@
 
     include_once "factory/conexao.php";
     $cod = $_POST["cxpesquisanome"];
-    $consulta = "SELECT * FROM tbcliente WHERE nome LIKE = '%$cod%'";
+    $consulta = "SELECT * FROM tbcliente WHERE nome LIKE '%$cod%'";
     $executar = mysqli_query($conn, $consulta);
     $linha = mysqli_fetch_array($executar);
 
     if ($linha) {
+        echo "ID: " . $linha["codigo"] . "<br/>";
         echo "Nome: " . $linha["nome"] . "<br/>";
         echo "E-mail: " . $linha["email"] . "<br/>";
         echo '<a href="telaexcluirclientes.php?id=' . $linha["codigo"] . '">Excluir</a> ';
         echo '<a href="telaalterarcliente.php">Alterar</a>';
+        echo '<a href="telaconsultaclientes.php" class="cxvoltar">
+                <img src="img/btnvoltarcli.png" alt="botao de voltar" id="btnvolt"></a>';
     } else {
         echo "Cliente não encontrado.";
+        echo '<a href="telaconsultaclientes.php" class="cxvoltar">
+        <img src="img/btnvoltarcli.png" alt="botao de voltar" id="btnvolt"></a>'; 
     }
 ?>
 </body>
