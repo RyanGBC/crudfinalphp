@@ -18,7 +18,7 @@
     
     include_once "factory/conexao.php";
     $nome = $_POST["cxpesquisaproduto"];
-    $consulta = "SELECT * FROM tbprodutos WHERE produto = '$nome'";
+    $consulta = "SELECT * FROM tbprodutos WHERE produto LIKE = '%$nome%'";
     $resultado = mysqli_query($conn, $consulta);
     $linha = mysqli_fetch_array($resultado);
 

@@ -18,7 +18,7 @@
 
     include_once "factory/conexao.php";
     $cod = $_POST["cxpesquisanome"];
-    $consulta = "SELECT * FROM tbcliente WHERE nome = '$cod'";
+    $consulta = "SELECT * FROM tbcliente WHERE nome LIKE = '%$cod%'";
     $executar = mysqli_query($conn, $consulta);
     $linha = mysqli_fetch_array($executar);
 
