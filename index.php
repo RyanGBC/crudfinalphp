@@ -7,7 +7,9 @@
     <link rel="stylesheet" type="text/css" href="css/estilo.css"/>
 </head>
 <body>
-    <h1>Sistema Azul</h1>
+    <h1>
+        <span class="titulo">Sistema Azul</span>
+    </h1>
     <section id="principal"> 
         <nav id="clicad">
             <figure>
