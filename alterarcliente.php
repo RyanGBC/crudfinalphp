@@ -29,7 +29,7 @@
     if ($executar) {
         echo "<p>Dados Alterados com Sucesso!<br/></p>";
     } else {
-        echo "<p>Erro ao alterar dados.</p>";
+        echo "<p>Erro ao alterar dados, por favor revise e tente novamente.</p>";
     }
 ?>
 
